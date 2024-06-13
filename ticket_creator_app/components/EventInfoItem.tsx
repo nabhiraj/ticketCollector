@@ -1,6 +1,7 @@
 import { View,Image,Text, StyleSheet  } from "react-native";
 
 export default function EventInfoItem({icon,primaryText,secondaryText,secTextStyle}:any){
+    console.log('secTextstyle is ',secTextStyle)
     let  secondaryTextStyle= secTextStyle?secTextStyle:{fontSize:12,lineHeight:20,color:'#A5A5A5'}
     let style = StyleSheet.create({
         iconSize:{
@@ -21,9 +22,9 @@ export default function EventInfoItem({icon,primaryText,secondaryText,secTextSty
     });
     return (<View style={style.mainViewStyle}>
         <Image source={icon} style={style.iconSize}></Image>
-        <View>
+        <View style={{marginLeft:12}}>
             <Text style={style.primaryTextStyle}> {primaryText} </Text>
-            <Text style={style.secondaryTextStyle}> {secondaryText} </Text>
+            {secondaryText && <Text style={style.secondaryTextStyle}> {secondaryText} </Text>}
         </View>
     </View>);
 }

@@ -6,10 +6,11 @@ let event1 = {
     time:'6:00 PM - 10:00 PM',
     subTitle: 'semi-final',
     Address: 'hyderabad',
-    exactAddress: 'Gochiboli, iiit hyderabad',
-    ticketCount: [67,200],
-    costRange: [100,34],
-    aboutEvent: 'random infomration about the event',
+    exactAddress: 'visible after buying the ticket',
+    ticketMessage: '78/100 tickets left',
+    ticketSecMessage: '100+ invited',
+    costRange: '$10.00 - $50.00',
+    aboutEvent: 'random infomration about the event random infomration about the event random infomration about the event random infomration about the event',
     locationOnMap: 33,
     question:[
         {
