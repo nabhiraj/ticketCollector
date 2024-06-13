@@ -10,8 +10,8 @@ export default function EventManager({ eventInfo }: any) {
         bottomBar: {
             position: 'absolute',
             bottom: inset.bottom,
-            backgroundColor: '000000',
-            width: '100%',
+            backgroundColor: '#FFFFFF',
+            width: '100%'
         },
     });
     let buyTicket = () => {

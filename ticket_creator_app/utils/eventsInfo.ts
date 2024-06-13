@@ -1,7 +1,9 @@
 let event1 = {
     eventId:101,
     status:'not_applied',
-    title:'football match',
+    title:'football match 🚀',
+    date:'Monday, Nov 13 2023',
+    time:'6:00 PM - 10:00 PM',
     subTitle: 'semi-final',
     Address: 'hyderabad',
     exactAddress: 'Gochiboli, iiit hyderabad',
@@ -12,10 +14,12 @@ let event1 = {
     question:[
         {
             type:'text',
+            id:0,
             ques:'which city are you from?'
         },
         {
             type:'single choice',
+            id:1,
             ques:'are you a player',
             options:[
                 'Yes',
@@ -24,6 +28,7 @@ let event1 = {
         },
         {
             type:'multi choice',
+            id:2,
             ques:'where did you hear abou the event',
             options:[
                 'twitter',
@@ -47,6 +52,7 @@ let event2 = {
     question:[
         {
             type:'single choice',
+            id:0,
             ques:'are you coming to inox for first time?',
             options:[
                 'Yes',
@@ -56,6 +62,7 @@ let event2 = {
         {
             type:'multi choice',
             ques:'where did you hear abou the event',
+            id:1,
             options:[
                 'twitter',
                 'news paper',
@@ -79,6 +86,7 @@ let event3 = {
     question:[
         {
             type:'single choice',
+            id:0,
             ques:'are you coming to inox for first time?',
             options:[
                 'Yes',
@@ -88,6 +96,7 @@ let event3 = {
         {
             type:'multi choice',
             ques:'where did you hear abou the event',
+            id:1,
             options:[
                 'twitter',
                 'news paper',
