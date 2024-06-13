@@ -9,9 +9,10 @@ export default function EventManager({ eventInfo }: any) {
     let eventButtonPanelStyle = StyleSheet.create({
         bottomBar: {
             position: 'absolute',
-            bottom: inset.bottom,
+            bottom: 0,
             backgroundColor: '#FFFFFF',
-            width: '100%'
+            width: '100%',
+            paddingBottom:inset.bottom
         },
     });
     let buyTicket = () => {
