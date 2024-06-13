@@ -1,4 +1,6 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import ticketIcon from './../assets/images/ticketIcon.png'
+import shareIcon from './../assets/images/shareIcon.png';
 export default function EventManager({ eventInfo }: any){
     let buyTicket = ()=>{
         console.log('logic to buy the ticket');
@@ -30,9 +32,11 @@ export default function EventManager({ eventInfo }: any){
                 eventInfo.status == 'approved' &&
                 <View style={style.approvedView}>
                     <TouchableOpacity onPress={openTicket} style={style.ticketInfoButton}>
+                        <Image style={{width:24,height:24}} source={ticketIcon}></Image>
                         <Text style={style.buttonText} >My tickets</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={shareEvent} style={style.shareEventButton}>
+                        <Image style={{width:24,height:24}} source={shareIcon}></Image>
                         <Text style={{color:'#6C63FF'}}>Share event</Text>
                     </TouchableOpacity>
                 </View> 
@@ -83,22 +87,24 @@ const style = StyleSheet.create({
         backgroundColor:'#6C63FF',
         height: 43,
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         flexGrow:2,
-        marginRight:2.5
+        marginRight:2.5,
+        flexDirection:'row'
       },
       shareEventButton:{
         borderRadius:50,
         backgroundColor:'#ffffff',
         height: 43,
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         flexGrow:2,
         borderColor:'#6C63FF',
         borderWidth:1.5,
-        marginLeft:2.5
+        marginLeft:2.5,
+        flexDirection: 'row'
       }
       
 });
