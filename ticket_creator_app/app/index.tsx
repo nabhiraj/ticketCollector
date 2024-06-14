@@ -12,7 +12,6 @@ export default function Index() {
       {list.map((eventItem:any) => 
         <ScrollView key={eventItem.eventId} style={style.eventItems}>
           <TouchableOpacity onPress={()=>{
-            console.log('printing hello world ',eventItem.eventId);
             router.push({pathname:'/eventDetails',params:eventItem});
           }}>
             <Text>{eventItem.title}</Text>

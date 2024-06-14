@@ -12,11 +12,16 @@ let event1 = {
     costRange: '$10.00 - $50.00',
     aboutEvent: 'random infomration about the event random infomration about the event random infomration about the event random infomration about the event',
     locationOnMap: 33,
-    question:[
+    questions:[
         {
             type:'text',
             id:0,
             ques:'which city are you from?'
+        },
+        {
+            type:'text',
+            id:10,
+            ques:'another random question?'
         },
         {
             type:'single choice',
