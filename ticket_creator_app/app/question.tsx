@@ -1,3 +1,4 @@
+import SingleChoiceQuestion from "@/components/SingleChoiceQuestion";
 import TextQuestion from "@/components/TextQuestion";
 import { useQuestionList } from "@/hooks/useQuestionList";
 import { useLocalSearchParams } from "expo-router";
@@ -26,16 +27,24 @@ export default function question(){
       
             <View>
                {
-                currQues.type==='text' && 
-                <TextQuestion 
-                    question={currQues}
-                    submitAnswer={processAnswer}
-                    answerPlaceHolder={'write your answer here'}
-                    ButtonText={ currQuesIndex == questionList.length - 1?'Claim ticket':'Next question'}
-                    currentIndex={currQuesIndex+1}
-                    totalCount = {questionList.length}
-                    >
-                </TextQuestion>}
+                    currQues.type==='text' && 
+                    <TextQuestion 
+                        question={currQues}
+                        submitAnswer={processAnswer}
+                        answerPlaceHolder={'write your answer here'}
+                        ButtonText={ currQuesIndex == questionList.length - 1?'Claim ticket':'Next question'}
+                        currentIndex={currQuesIndex+1}
+                        totalCount = {questionList.length}>
+                    </TextQuestion>
+                }
+                {
+                    currQues.type==='single choice' &&
+                    <SingleChoiceQuestion question={currQues}
+                        submitAnswer={processAnswer}
+                        currentIndex={currQuesIndex+1}
+                        totalCount={questionList.length}>
+                    </SingleChoiceQuestion>
+                }
             </View>
        
     );

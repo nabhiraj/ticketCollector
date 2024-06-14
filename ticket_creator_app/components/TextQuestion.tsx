@@ -24,7 +24,7 @@ export default function TextQuestion({ question, submitAnswer, answerPlaceHolder
                     console.log('submitting answer ',answer);
                     submitAnswer(answer) 
                 }}>
-                <Text>{ButtonText}</Text>
+                <Text style={style.buttonTextStyle}>{ButtonText}</Text>
             </TouchableOpacity>
         </View>
     );
@@ -67,6 +67,10 @@ const style = StyleSheet.create({
         marginTop:30,
         fontSize:26,
         lineHeight:31
-        
+    },
+    buttonTextStyle:{
+        fontSize:16,
+        lineHeight:19,
+        color:'#FFFFFF'
     }
 });
