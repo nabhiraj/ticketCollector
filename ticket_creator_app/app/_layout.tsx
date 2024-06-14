@@ -11,10 +11,8 @@ export default function RootLayout() {
           <Stack.Screen name="index" />
           <Stack.Screen name="question" options={{ headerShown: false }}/>
           <Stack.Screen name="eventDetails" options={
-            {
-                headerStyle: {
-                  backgroundColor: '#000000'
-                },
+            {   headerTransparent: true,
+                
                 headerTintColor: 'white',
                 headerTitleAlign: 'center',
                 title: 'Event',
