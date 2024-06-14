@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import eventContext from './../context/eventContext'
+import { useEventContext } from "@/context/useEventContext";
 
 export function useQuestionList(eventId:any){
-    let {list} = useContext(eventContext);
+    let {list} = useEventContext();
     let getEventFromId = (id:number,list:any)=>{
         let event = list.filter((x:any)=> x.eventId == id);
         if(event.length){

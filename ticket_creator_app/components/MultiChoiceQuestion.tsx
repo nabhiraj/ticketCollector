@@ -5,7 +5,6 @@ import checkIcon from './../assets/images/check.png'
 export default function MultiChoiceQuestion({ question, submitAnswer, currentIndex, totalCount,ButtonText }: any) {
     let [answer, setAnswer] = useState<any[]>([]);
     useEffect(()=>{
-        console.log('use event working');
         setAnswer([]);
     },[question])
     return (
@@ -43,7 +42,6 @@ export default function MultiChoiceQuestion({ question, submitAnswer, currentInd
                 </View>
             </View>
             <TouchableOpacity style={style.buttonStyle} onPress={() => { 
-                    console.log('submitting answer ',answer);
                     submitAnswer(answer) 
                 }}>
                 <Text style={style.buttonTextStyle}>{ButtonText}</Text>

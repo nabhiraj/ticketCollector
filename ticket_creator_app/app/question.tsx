@@ -1,7 +1,8 @@
 import MultiChoiceQuestion from "@/components/MultiChoiceQuestion";
 import SingleChoiceQuestion from "@/components/SingleChoiceQuestion";
 import TextQuestion from "@/components/TextQuestion";
-import eventContext from "@/context/eventContext";
+import { EventContext } from "@/context/EventContext";
+import { useEventContext } from "@/context/useEventContext";
 import { useQuestionList } from "@/hooks/useQuestionList";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useContext, useState } from "react";
@@ -15,7 +16,7 @@ export default function question(){
     let route = useRouter();
     let questionList = useQuestionList(eventId);
     //this is the testing code
-    let {list,setEvent} = useContext(eventContext)
+    let {list,setEvent} = useEventContext();
     //this is the testing code.
     let [currQuesIndex,setCurrQuesIndex] = useState(0);
     let [answers,setAnswer] = useState<any[]>([]);
@@ -26,6 +27,7 @@ export default function question(){
            console.log('logic to submit the ansesr');
            let eventInfo = list.filter(x=> x.eventId == eventId )[0];
            eventInfo.status = 'wait';
+           console.log('the event infor is ',eventInfo);
            setEvent(eventId,eventInfo);
            //-- this is the testing code
            route.back();

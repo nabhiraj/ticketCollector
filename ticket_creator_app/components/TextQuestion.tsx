@@ -21,7 +21,6 @@ export default function TextQuestion({ question, submitAnswer, answerPlaceHolder
                 </TextInput>
             </View>
             <TouchableOpacity style={style.buttonStyle} onPress={() => { 
-                    console.log('submitting answer ',answer);
                     submitAnswer(answer) 
                 }}>
                 <Text style={style.buttonTextStyle}>{ButtonText}</Text>
