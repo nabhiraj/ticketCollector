@@ -9,7 +9,7 @@ import coinIcon from './../assets/images/coinIcon.png'
 export default function EventViewer({ eventInfo }: any) {
     return (
         <View style={{ height: '100%' }}>
-            <BottomSheet snapPoints={['40%', '80%']}>
+            <BottomSheet snapPoints={['55%', '80%']}>
                 <BottomSheetScrollView style={[style.bottomSheet]}>
                     <View style={style.mainMargin}>
                         <View>

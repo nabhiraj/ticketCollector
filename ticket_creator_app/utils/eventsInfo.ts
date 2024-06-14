@@ -46,7 +46,7 @@ let event1 = {
 };
 let event2 = {
     eventId:121,
-    status:'wait',
+    status:'not_applied',
     title:'football match 🚀',
     date:'Monday, Nov 16 2023',
     time:'6:00 PM - 10:00 PM',
