@@ -18,7 +18,6 @@ export default function eventDetails() {
                 source={backGroundImage}
                 style={style.backGroundStyle}>
                 <View>
-                    
                     <EventDashBoard eventInfo={eventInfo}></EventDashBoard>
                 </View>
             </ImageBackground></>
