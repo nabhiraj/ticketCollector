@@ -3,10 +3,6 @@ import { View, Text, TouchableOpacity, TextInput, StyleSheet } from "react-nativ
 
 export default function SingleChoiceQuestion({ question, submitAnswer, currentIndex, totalCount }: any) {
     let [answer, setAnswer] = useState('');
-    useEffect(()=>{
-        console.log('use event working');
-        setAnswer('');
-    },[question])
     return (
         <View style={style.flexView}>
             <View style={style.questionView}>
