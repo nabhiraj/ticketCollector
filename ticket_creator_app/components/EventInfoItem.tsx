@@ -1,7 +1,6 @@
 import { View,Image,Text, StyleSheet  } from "react-native";
 
 export default function EventInfoItem({icon,primaryText,secondaryText,secTextStyle}:any){
-    console.log('secTextstyle is ',secTextStyle)
     let  secondaryTextStyle= secTextStyle?secTextStyle:{fontSize:12,lineHeight:20,color:'#A5A5A5'}
     let style = StyleSheet.create({
         iconSize:{

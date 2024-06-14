@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import BottomSheet, { BottomSheetView } from "@gorhom/bottom-sheet";
+import BottomSheet, { BottomSheetScrollView } from "@gorhom/bottom-sheet";
 import EventInfoItem from "./EventInfoItem";
 import calendarIcon from './../assets/images/calendar.png'
 import locationIcon from './../assets/images/locationIcon.png'
@@ -10,8 +10,8 @@ export default function EventViewer({ eventInfo }: any) {
     return (
         <View style={{ height: '100%' }}>
             <BottomSheet snapPoints={['40%', '80%']}>
-                <BottomSheetView style={[style.bottomSheet]}>
-                    <ScrollView style={style.mainMargin}>
+                <BottomSheetScrollView style={[style.bottomSheet]}>
+                    <View style={style.mainMargin}>
                         <View>
                             <Text style={style.eventTitleStyle}>{eventInfo.title}</Text>
                             <Text>{eventInfo.subTitle}</Text>
@@ -28,8 +28,9 @@ export default function EventViewer({ eventInfo }: any) {
                             <Text style={{fontSize:18,lineHeight:20}}>About this event</Text>
                             <Text style={{fontSize:16,lineHeight:24,marginTop:10}}> {eventInfo.aboutEvent}</Text>
                         </View>
-                    </ScrollView>
-                </BottomSheetView>
+                       
+                    </View>
+                </BottomSheetScrollView>
             </BottomSheet>
         </View>
     );
@@ -44,7 +45,8 @@ const style = StyleSheet.create({
     },
     mainMargin: {
         marginLeft: 33,
-        marginTop:40
+        marginTop:40,
+        paddingBottom:103
     },
     eventTitleStyle:{
         fontSize: 26,

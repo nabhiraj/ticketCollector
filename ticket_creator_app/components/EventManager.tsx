@@ -3,9 +3,11 @@ import ticketIcon from './../assets/images/ticketIcon.png'
 import shareIcon from './../assets/images/shareIcon.png';
 import { Shadow } from 'react-native-shadow-2';
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
+import question from "@/app/question";
 export default function EventManager({ eventInfo }: any) {
     let inset = useSafeAreaInsets();
-    console.log('the inset value is ',inset);
+    let route = useRouter();
     let eventButtonPanelStyle = StyleSheet.create({
         bottomBar: {
             position: 'absolute',
@@ -16,7 +18,11 @@ export default function EventManager({ eventInfo }: any) {
         },
     });
     let buyTicket = () => {
-        console.log('logic to buy the ticket');
+        if(eventInfo.questions && eventInfo.questions.length > 0){
+            route.push({pathname:'/question',params:{"id":eventInfo.eventId}})
+        }else{
+            //directly change the state.
+        }
     }
     let notifyAboutWait = () => {
         console.log('this should generate the toast');
